@@ -29,7 +29,7 @@ class ExcelController extends Controller
         Excel::import(new import,request()->file('file'));
         return back();
     }
-    public function create(){
+    public function create(Request $request){
         $data = new dudi;
         $data->perusahaan = $request->perusahaan;
         $data->kota = $request->kota;
