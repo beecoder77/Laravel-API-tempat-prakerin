@@ -21,7 +21,7 @@ Route::get('data/{kuota}', function($kuota) {
     return dudi::where('kuota', $kuota)->get();
 });
 Route::post('data/create','ExcelController@create');
-Route::delete('data/{id}','ExcelController@delete');
+Route::delete('data/delete/{id}','ExcelController@delete');
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
