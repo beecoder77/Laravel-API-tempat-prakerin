@@ -48,4 +48,29 @@ class ExcelController extends Controller
         $data->delete();
         return "Data Berhasil di Hapus";
     }
+    public function update(request $request, $id){
+      $perusahaan = $request->perusahaan;
+      $kota = $request->kota;
+      $alamat = $request->alamat;
+      $email = $request->email;
+      $cp = $request->cp;
+      $jabatan = $request->jabatan;
+      $kontak = $request->kontak;
+      $kuota = $request->kuota;
+
+      $data = dudi::find($id);
+      $data->perusahaan = $perusahaan;
+      $data->kota = $kota;
+      $data->alamat = $alamat;
+      $data->email = $email;
+      $data->cp = $cp;
+      $data->jabatan = $jabatan;
+      $data->kontak = $kontak;
+      $data->kuota = $kuota;
+
+      $data->save();
+
+      return "Data berhasil di update";
+      
+    }
 }

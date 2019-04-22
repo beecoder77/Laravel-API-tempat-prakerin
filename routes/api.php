@@ -22,6 +22,8 @@ Route::get('data/{kuota}', function($kuota) {
 });
 Route::post('data/create','ExcelController@create');
 Route::delete('data/delete/{id}','ExcelController@delete');
+Route::post('data/update/{id}', 'ExcelController@update');
+
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
