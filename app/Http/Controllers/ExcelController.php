@@ -42,4 +42,10 @@ class ExcelController extends Controller
         $data->save();
         return "Data berhasil Masuk";
     }
+    public function delete(request $request, $id)
+    {
+        $data = dudi::find($id);
+        $data->delete();
+        return "Data Berhasil di Hapus";
+    }
 }

@@ -14,13 +14,14 @@ use App\dudi;
 */
 
 Route::get('data', 'ExcelController@showAll');
-Route::get('data/{kota}', function($prov) {
-    return dudi::where('kota', $prov)->get();
+Route::get('data/{kota}', function($kota) {
+    return dudi::where('kota', $kota)->get();
 });
-Route::get('data/{kuota}', function($prov) {
-    return dudi::where('kuota', $prov)->get();
+Route::get('data/{kuota}', function($kuota) {
+    return dudi::where('kuota', $kuota)->get();
 });
 Route::post('data/create','ExcelController@create');
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::delete('data/{id}','ExcelController@delete');
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
