@@ -177,7 +177,8 @@ return [
 
         //Maatwebsite nya broo
         Maatwebsite\Excel\ExcelServiceProvider::class,
-
+        //fix cors
+        Barryvdh\Cors\ServiceProvider::class,
     ],
 
     /*
