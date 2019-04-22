@@ -30,7 +30,7 @@ class ExcelController extends Controller
         return back();
     }
     public function create(){
-        $data = new Book;
+        $data = new dudi;
         $data->perusahaan = $request->perusahaan;
         $data->kota = $request->kota;
         $data->alamat = $request->alamat;
